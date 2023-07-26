@@ -40,7 +40,7 @@ export default NextAuth({
           };
           return aux;
         }
-        throw new Error("Invalid email or password");
+        throw new Error("Email o contraseña incorrectos");
       },
     }),
   ],

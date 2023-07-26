@@ -57,7 +57,11 @@ export const Layout = ({ title, children }) => {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <ToastContainer position="bottom-center" limit={1} />
+      {screenWidth < 768 ? (
+        <ToastContainer position="top-center" limit={1} />
+      ) : (
+        <ToastContainer position="bottom-center" limit={1} />
+      )}
 
       <div className="flex flex-col  font-raleway overflow-clip relative">
         <header className="sticky top-0 h-12 border-b bg-white border-x-gray-400 md:h-20 flex items-center justify-between z-20">

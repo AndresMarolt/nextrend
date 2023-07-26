@@ -24,7 +24,9 @@ const ProductScreen = (props) => {
   }, []);
 
   if (!product) {
-    return <Layout title={"Producto no encontrado"}>Product Not Found</Layout>;
+    return (
+      <Layout title={"Producto no encontrado"}>Producto no encontrado</Layout>
+    );
   }
 
   const addToCartHandler = async () => {
